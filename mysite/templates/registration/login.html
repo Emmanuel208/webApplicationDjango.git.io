@@ -1,0 +1,24 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+<!-- adding background color -->
+<h2 style="background-color:DodgerBlue;">Log In</h2>
+
+<style>
+body {
+  background-image: url('image/map.png');
+}
+</style>
+
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+{% endblock %}
+
